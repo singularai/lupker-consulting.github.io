@@ -11,9 +11,8 @@
         font-family: "Lato", sans-serif
     }
 
-    #navbar {
+    .navbar {
         overflow: hidden;
-
         position: fixed; /* Set the navbar to fixed position */
 
     }
@@ -39,23 +38,31 @@
 
     }
 
+    .main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+
+
 </style>
 <body>
 
 <!-- Links (sit on top) -->
-<div id='navbar' class="w3-top w3-padding">
-    <div class="w3-row w3-large" >
+<div id='navbar' class="w3-top w3-padding w3-white">
+    <div class="w3-row w3-large">
         <div class="w3-col s3">
-            <a class="w3-button w3-round-xxlarge w3-block" style="background-color: #b6cdeb; color:white">Home</a>
+            <a href="index.html" class="w3-button w3-round-xxlarge w3-block" style="background-color: #b6cdeb; color:white">Home</a>
         </div>
         <div class="w3-col s3">
-            <a href="past_work.html" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey" style="color: #b6cdeb">Past Work</a>
+            <a href="past_work.html" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey"
+               style="color: #b6cdeb">Past Work</a>
         </div>
         <div class="w3-col s3">
-            <a href="#about" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey" style="color: #b6cdeb">About</a>
+            <a href="#about" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey"
+               style="color: #b6cdeb">About</a>
         </div>
         <div class="w3-col s3">
-            <a href="#contact" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey" style="color: #b6cdeb">Contact</a>
+            <a href="#contact" class="links w3-button w3-round-xxlarge w3-block w3-hover-light-grey"
+               style="color: #b6cdeb">Contact</a>
         </div>
     </div>
 </div>
@@ -63,7 +70,7 @@
 <div class="w3-content w3-center" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
     <div class="w3-row">
         <img src="img/lc-logo.png" style="width:40%">
-        <h5 class="w3-padding w3-center w3-wide w3-text-grey">Machine Learning Solutions for Business</h5>
+        <h5 class="w3-padding w3-center w3-wide w3-text-grey">Machine Learning Solutions & Architecture</h5>
     </div>
     <hr>
     <!--     grid of examples-->
@@ -88,23 +95,27 @@
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
     </div>
     <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
-        <h3>Front-End</h3>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <h3>Architecture</h3>
+        <p>We will design your machine learning model, allowing for a plug-and-play approach for you to link your data
+            to the model for quick results.</p>
     </div>
 
     <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
-        <h3>Back-End</h3>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <h3>Solutions</h3>
+        <p>Allow us to take care of designing and training any machine learning models. You will receive a fully-trained
+            and ready to use model.</p>
     </div>
 
     <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
         <h3>Consultation</h3>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p>Get help from an expert on how to best design and train your machine learning model. We have published
+            experts who are happy to help you with any project.</p>
     </div>
 
     <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
         <h3>Promises</h3>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p>We will realize your machine learning needs in topics such as language models, computer vision,
+            classification and more. Contact us for more information.</p>
     </div>
 </div>
 
@@ -116,20 +127,23 @@
     </div>
 
     <div class="w3-margin-bottom w3-center">
-        <div class="w3-card-4">
+        <div class="w3-panel w3-padding">
             <img class="w3-circle" src="img/jeff.jpg" alt="John" style="width:20%">
             <div class="w3-container">
                 <h3>Jeff Lupker</h3>
                 <p class="w3-opacity">Owner & Machine Learning Engineer</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-                    elementum.</p>
-                <p>
-                    <button class="w3-button w3-light-grey w3-block">Contact</button>
-                </p>
+                <div class="w3-center">
+                    Jeff is a PhD candidate at Western University interested in artificially modelling human
+                    creativity in music composition, fintech and blockchain technology.
+                </div>
+                <div class="w3-xlarge w3-section">
+                    <a href="https://github.com/lupks" class="fa fa-github w3-hover-opacity"></a>
+                    <a href="https://www.linkedin.com/in/jeff-lupker-11018a1a4/"
+                       class="fa fa-linkedin w3-hover-opacity"></a>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 <!-- Contact -->
@@ -137,34 +151,44 @@
     <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
 </div>
 
-<form class="w3-container" action="/action_page.php" target="_blank">
-    <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name"
-               required>
-    </div>
-    <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email"
-               required>
-    </div>
-    <div class="w3-section">
-        <label>Subject</label>
-        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
-    </div>
-    <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
-    </div>
-    <button type="submit" class="w3-button w3-block w3-black">Send</button>
-</form>
+<div class="w3-container w3-content w3-padding-16" style="max-width:400px" id="send_coin">
+    <div class="w3-card-4 w3-round-xlarge">
+        <div class="w3-container w3-center w3-round-xlarge w3-hover-shadow">
+            <form id="form-transaction" action="/action_page.php" target="_blank">
 
+                <div class="w3-section">
+                    <label class="w3-left w3-padding">Name</label>
+                    <input class="w3-input w3-middle w3-round-xlarge w3-border w3-text-black w3-hover-border-black"
+                           style="width:100%;" type="text" name="Name"
+                           required>
+                </div>
+                <div class="w3-section">
+                    <label class="w3-left w3-padding">Email</label>
+                    <input class="w3-input w3-middle w3-round-xlarge w3-border w3-text-black w3-hover-border-black"
+                           style="width:100%;" type="email" name="Email"
+                           required>
+                </div>
+                <div class="w3-section">
+                    <label class="w3-left w3-padding">Subject</label>
+                    <input class="w3-input w3-middle w3-round-xlarge w3-border w3-text-black w3-hover-border-black"
+                           style="width:100%;" name="Subject" required>
+                </div>
+                <div class="w3-section">
+                    <label class="w3-left w3-padding">Message</label>
+                    <input class="w3-input w3-middle w3-round-xlarge w3-border w3-text-black w3-hover-border-black"
+                           style="width:100%;" name="Message" required>
+                </div>
+                <button type="submit" class="w3-input w3-middle w3-round-xlarge w3-border w3-text-white w3-black">Send
+                </button>
+            </form>
+            <br>
+        </div>
+    </div>
 </div>
+<br>
 
 <!-- Footer -->
-
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-    <h4>Footer</h4>
     <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
         <i class="fa fa-github w3-hover-opacity"></i>
